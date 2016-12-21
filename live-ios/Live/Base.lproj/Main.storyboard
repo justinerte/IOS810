@@ -18,7 +18,7 @@
         <!--View Controller-->
         <scene sceneID="Y7q-SP-KGs">
             <objects>
-                <viewController id="3IF-MJ-0FC" customClass="ViewController" customModule="Live" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3IF-MJ-0FC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MUW-cq-szM"/>
                         <viewControllerLayoutGuide type="bottom" id="O7F-CI-zVw"/>
@@ -34,12 +34,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-dw-rvh" customClass="ViewCon">
+                                <rect key="frame" x="150" y="237" width="84" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kjd-E2-pMO"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="logButtonTapped" destination="Ne0-dw-rvh" id="QyF-n4-ekl"/>
                         <segue destination="a5W-Zp-67k" kind="modal" identifier="loginView" id="NOz-36-yDL"/>
                     </connections>
                 </viewController>
@@ -779,7 +785,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kPp-GM-YLq" customClass="NavigationController" customModule="Live" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uqv-yX-KK5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uqv-yX-KK5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -807,7 +813,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="o4T-Ro-y1t"/>
+        <segue reference="NOz-36-yDL"/>
         <segue reference="93g-pg-D1Y"/>
     </inferredMetricsTieBreakers>
 </document>
