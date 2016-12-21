@@ -45,8 +45,16 @@ class RegisterPageViewController: UIViewController {
             displayMaAlertMessage(userMessage: "Passwords do not match");
         }
         // Store data
+        UserDefaults.standard.set(userEmail,forKey:"userEmail");
+        
+        UserDefaults.standard.set(userPassword,forKey:"userPassword");
+        
+        UserDefaults.standard.synchronize();
+        
         
         // Dispaly alert message with confirmation
+        displayMaAlertMessage(userMessage: "Registration is successful.Thank you!")
+        
     }
     func displayMaAlertMessage(userMessage:String){
         let myAlert = UIAlertController(title:"Alert",message:userMessage,preferredStyle:UIAlertControllerStyle.alert);
