@@ -31,14 +31,31 @@ class RegisterPageViewController: UIViewController {
         
         //Check for empty fields
         if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatedPassword?.isEmpty)!){
-            //Disp alert message
+            //Display alert message
+            
+            displayMaAlertMessage(userMessage: "All fields are required");
+            
             return;        
         }
         
-        
+        // Check if password match
+        if(userPassword != userRepeatedPassword)
+        {
+            //Display an alert message
+            displayMaAlertMessage(userMessage: "Passwords do not match");
+        }
         // Store data
         
         // Dispaly alert message with confirmation
+    }
+    func displayMaAlertMessage(userMessage:String){
+        let myAlert = UIAlertController(title:"Alert",message:userMessage,preferredStyle:UIAlertControllerStyle.alert);
+        
+        let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil)
+        
+        myAlert.addAction(okAction);
+        
+        self.present(myAlert,animated:true,completion:nil);
     }
 
     /*
