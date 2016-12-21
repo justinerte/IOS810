@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0924B9891E09EA7B00A21C6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B9881E09EA7B00A21C6E /* ViewController.swift */; };
 		0924B98B1E09EC4D00A21C6E /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */; };
+		0924B98D1E0AC3A300A21C6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */; };
 		B32E392C1D336A5500FA87AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E392B1D336A5500FA87AB /* AppDelegate.swift */; };
 		B32E39311D336A5500FA87AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E392F1D336A5500FA87AB /* Main.storyboard */; };
 		B32E39361D336A5500FA87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E39341D336A5500FA87AB /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0924B9881E09EA7B00A21C6E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4FD07D4932212F687E5F1B5C /* Pods-Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.debug.xcconfig"; sourceTree = "<group>"; };
 		8FEF6E319D18D0F7F9E49151 /* Pods-Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.release.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.release.xcconfig"; sourceTree = "<group>"; };
 		9AB8022663522F75E00F7B60 /* Pods_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 				B3401F701D35E48000ECF1CC /* Model.swift */,
 				0924B9881E09EA7B00A21C6E /* ViewController.swift */,
 				0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */,
+				0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				B32E392C1D336A5500FA87AB /* AppDelegate.swift in Sources */,
 				B3401F6A1D35DCA400ECF1CC /* String.swift in Sources */,
 				B3401F8A1D38AA6E00ECF1CC /* GiftChooserViewController.swift in Sources */,
+				0924B98D1E0AC3A300A21C6E /* LoginViewController.swift in Sources */,
 				B3401F6E1D35E22800ECF1CC /* R.generated.swift in Sources */,
 				B3401F331D33903100ECF1CC /* AudienceViewController.swift in Sources */,
 				B3401F761D3631B300ECF1CC /* Config.swift in Sources */,

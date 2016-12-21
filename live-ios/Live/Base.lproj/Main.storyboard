@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-230.5" y="1843.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="rew-bQ-4Hr">
             <objects>
-                <viewController id="a5W-Zp-67k" sceneMemberID="viewController">
+                <viewController id="a5W-Zp-67k" customClass="LoginViewController" customModule="Live" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Is7-Gt-bwh"/>
                         <viewControllerLayoutGuide type="bottom" id="f50-Qq-ijI"/>
@@ -111,17 +111,21 @@
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="fEL-Zt-6G9" kind="modal" id="ZFq-x1-OO6"/>
+                                    <action selector="loginButtonTapped:" destination="a5W-Zp-67k" eventType="touchUpInside" id="Ma0-em-pSV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3uJ-WV-0tG"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="YRM-Mz-4uc" id="nmo-D0-HmX"/>
+                        <outlet property="userPasswordTextField" destination="pZm-AG-ztA" id="4CD-aW-Eut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn2-wh-fCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246.5" y="1854.5"/>
+            <point key="canvasLocation" x="186" y="1844"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="ItE-VB-1yg">
@@ -712,7 +716,7 @@
                                 <rect key="frame" x="0.0" y="517" width="375" height="150"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymR-i2-HKv">
-                                        <rect key="frame" x="162.5" y="50" width="50" height="50"/>
+                                        <rect key="frame" x="163" y="50" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Us5-wo-muB"/>
                                             <constraint firstAttribute="height" constant="50" id="xUO-kv-2ou"/>
@@ -723,7 +727,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU0-JK-xOl">
-                                        <rect key="frame" x="72.5" y="50" width="50" height="50"/>
+                                        <rect key="frame" x="73" y="50" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BDS-Xd-Muu"/>
                                             <constraint firstAttribute="width" constant="50" id="dAk-RK-1cl"/>
@@ -734,7 +738,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNV-ih-VBu">
-                                        <rect key="frame" x="252.5" y="50" width="50" height="50"/>
+                                        <rect key="frame" x="253" y="50" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="5FD-8M-6oa"/>
                                             <constraint firstAttribute="height" constant="50" id="CAL-4j-WXS"/>
@@ -775,7 +779,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kPp-GM-YLq" customClass="NavigationController" customModule="Live" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uqv-yX-KK5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uqv-yX-KK5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -804,6 +808,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="o4T-Ro-y1t"/>
-        <segue reference="66o-s1-S8a"/>
+        <segue reference="93g-pg-D1Y"/>
     </inferredMetricsTieBreakers>
 </document>

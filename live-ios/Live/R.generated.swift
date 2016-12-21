@@ -158,16 +158,16 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This struct is generated for `UIViewController`, and contains static references to 1 segues.
-    struct uIKitUIViewController {
+    /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
+    struct loginViewController {
       /// Segue identifier `registerView`.
-      static let registerView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, UIKit.UIViewController, RegisterPageViewController> = Rswift.StoryboardSegueIdentifier(identifier: "registerView")
+      static let registerView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, RegisterPageViewController> = Rswift.StoryboardSegueIdentifier(identifier: "registerView")
       
       /// Optionally returns a typed version of segue `registerView`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func registerView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, UIKit.UIViewController, RegisterPageViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.uIKitUIViewController.registerView, segue: segue)
+      static func registerView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, RegisterPageViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.registerView, segue: segue)
       }
       
       fileprivate init() {}
@@ -176,12 +176,12 @@ struct R: Rswift.Validatable {
     /// This struct is generated for `ViewController`, and contains static references to 1 segues.
     struct viewController {
       /// Segue identifier `loginView`.
-      static let loginView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ViewController, UIKit.UIViewController> = Rswift.StoryboardSegueIdentifier(identifier: "loginView")
+      static let loginView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ViewController, LoginViewController> = Rswift.StoryboardSegueIdentifier(identifier: "loginView")
       
       /// Optionally returns a typed version of segue `loginView`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func loginView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ViewController, UIKit.UIViewController>? {
+      static func loginView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ViewController, LoginViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.viewController.loginView, segue: segue)
       }
       
