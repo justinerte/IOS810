@@ -10,6 +10,8 @@ import UIKit
 
 class RegisterPageViewController: UIViewController {
 
+   
+    @IBOutlet weak var userNicknameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
@@ -24,13 +26,15 @@ class RegisterPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func registerButtonTapped(_ sender: Any) {
         let userPassword = userPasswordTextField.text;
         let userEmail = userEmailTextField.text;
         let userRepeatedPassword = repeatPasswordTextField.text;
+        let userNickname = userNicknameTextField.text;
         
         //Check for empty fields
-        if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatedPassword?.isEmpty)!){
+        if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatedPassword?.isEmpty)!) || (userNickname?.isEmpty)!{
             //Display alert message
             
             displayMaAlertMessage(userMessage: "All fields are required");
@@ -48,6 +52,8 @@ class RegisterPageViewController: UIViewController {
         UserDefaults.standard.set(userEmail,forKey:"userEmail");
         
         UserDefaults.standard.set(userPassword,forKey:"userPassword");
+        
+        UserDefaults.standard.set(userNickname,forKey:"userNickname");
         
         UserDefaults.standard.synchronize();
         
