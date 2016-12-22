@@ -10,6 +10,8 @@
 		0924B9891E09EA7B00A21C6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B9881E09EA7B00A21C6E /* ViewController.swift */; };
 		0924B98B1E09EC4D00A21C6E /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */; };
 		0924B98D1E0AC3A300A21C6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */; };
+		093A98A81E0C20770006A4E1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A98A71E0C20770006A4E1 /* icon.png */; };
+		093A98AA1E0C227B0006A4E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093A98A91E0C227B0006A4E1 /* Images.xcassets */; };
 		B32E392C1D336A5500FA87AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E392B1D336A5500FA87AB /* AppDelegate.swift */; };
 		B32E39311D336A5500FA87AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E392F1D336A5500FA87AB /* Main.storyboard */; };
 		B32E39361D336A5500FA87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E39341D336A5500FA87AB /* LaunchScreen.storyboard */; };
@@ -51,6 +53,8 @@
 		0924B9881E09EA7B00A21C6E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		093A98A71E0C20770006A4E1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		093A98A91E0C227B0006A4E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4FD07D4932212F687E5F1B5C /* Pods-Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.debug.xcconfig"; sourceTree = "<group>"; };
 		8FEF6E319D18D0F7F9E49151 /* Pods-Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.release.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.release.xcconfig"; sourceTree = "<group>"; };
 		9AB8022663522F75E00F7B60 /* Pods_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,7 @@
 				B32E39371D336A5500FA87AB /* Info.plist */,
 				B3401F2A1D3389A800ECF1CC /* Live-Bridging-Header.h */,
 				B3401F751D3631B300ECF1CC /* Config.swift */,
+				093A98A91E0C227B0006A4E1 /* Images.xcassets */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B3401F5C1D35DBF900ECF1CC /* Raleway-Regular.ttf */,
+				093A98A71E0C20770006A4E1 /* icon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -263,7 +269,6 @@
 				TargetAttributes = {
 					B32E39271D336A5500FA87AB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = LUAG5Z5ST3;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -293,7 +298,9 @@
 			files = (
 				B32E39361D336A5500FA87AB /* LaunchScreen.storyboard in Resources */,
 				B3401F561D34C1A200ECF1CC /* Assets.xcassets in Resources */,
+				093A98AA1E0C227B0006A4E1 /* Images.xcassets in Resources */,
 				B32E39311D336A5500FA87AB /* Main.storyboard in Resources */,
+				093A98A81E0C20770006A4E1 /* icon.png in Resources */,
 				B3401F861D38800F00ECF1CC /* GiftDisplayView.xib in Resources */,
 				B3401F5D1D35DBF900ECF1CC /* Raleway-Regular.ttf in Resources */,
 			);
@@ -503,9 +510,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FD07D4932212F687E5F1B5C /* Pods-Live.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -526,9 +536,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FEF6E319D18D0F7F9E49151 /* Pods-Live.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

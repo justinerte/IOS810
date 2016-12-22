@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         if(userEmail == userEmailStored){
             if(userPassword == userPasswordStord){
                 //login is successfull
-            UserDefaults.standard.set(true,forKey:"isUserLoggedIn");
+                UserDefaults.standard.set(true,forKey:"isUserLoggedIn");
                 UserDefaults.standard.synchronize();
                 self.dismiss(animated: true, completion: nil);
             }

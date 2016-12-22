@@ -22,14 +22,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
     /// Resource file `Raleway-Regular.ttf`.
     static let ralewayRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Raleway-Regular", pathExtension: "ttf")
+    /// Resource file `icon.png`.
+    static let iconPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon", pathExtension: "png")
     
     /// `bundle.url(forResource: "Raleway-Regular", withExtension: "ttf")`
     static func ralewayRegularTtf(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.ralewayRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "icon", withExtension: "png")`
+    static func iconPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.iconPng
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -53,8 +61,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 10 images.
   struct image {
+    /// Image `LaunchImage-2`.
+    static let launchImage2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage-2")
+    /// Image `LaunchImage`.
+    static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
     /// Image `gift-1`.
     static let gift1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "gift-1")
     /// Image `gift-2`.
@@ -69,6 +81,18 @@ struct R: Rswift.Validatable {
     static let iconGift = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-gift")
     /// Image `icon-like`.
     static let iconLike = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-like")
+    /// Image `icon`.
+    static let icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon")
+    
+    /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
+    static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "LaunchImage-2", bundle: ..., traitCollection: ...)`
+    static func launchImage2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.launchImage2, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "gift-1", bundle: ..., traitCollection: ...)`
     static func gift1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -88,6 +112,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "heart", bundle: ..., traitCollection: ...)`
     static func heart(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.heart, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon", bundle: ..., traitCollection: ...)`
+    static func icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon-close", bundle: ..., traitCollection: ...)`
