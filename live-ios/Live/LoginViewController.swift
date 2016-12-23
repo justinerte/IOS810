@@ -60,17 +60,24 @@ class LoginViewController: UIViewController {
                 print("resultStatus: \(resultStatus) \n")
                 if resultStatus == "succ"{
                     isUserLogined = true
-                    User.currentUser.email = userEmail!;
-                    //self.dismiss(animated: true, completion: nil);
+                    
+                    var userinfo = parseJSON["data"] as! [String: String]
+                    
+                    User.currentUser.id = userinfo["_id"]!
+                    User.currentUser.sessionid =  userinfo["session_id"]!
+                    User.currentUser.email =  userinfo["email"]!
+                    User.currentUser.nickname =  userinfo["nickname"]!
+                    
                 }
-                
-                var messageToDisplay:String =  parseJSON["msg"] as! String
-                
-//                DispatchQueue.main.async {
-//                    //self.displayMaAlertMessage(userMessage: messageToDisplay)
-//                }
+                print("msg: \(parseJSON["msg"]) \n");
+
                 if(isUserLogined == true){
-                    self.performSegue(withIdentifier: "NavigationControllerView", sender: self);
+                    
+                    DispatchQueue.main.async {
+                        //self.displayMaAlertMessage(userMessage: messageToDisplay)
+                        self.performSegue(withIdentifier: "NavigationControllerView", sender: self)
+                    }
+                 
                 }
 
             }

@@ -39,8 +39,10 @@ struct Comment {
 
 struct User {
     
-    var id = Int(arc4random())
+    var id = ""
+    var sessionid = ""
     var email = ""
+    var nickname = ""
     static var currentUser = User()
 }
 

@@ -106,7 +106,7 @@ extension LiveOverlayViewController: UITextFieldDelegate {
             if let text = textField.text , text != "" {
                 socket.emit("comment", [
                     "roomKey": room.key,
-                    "text": text
+                    "text": "\(User.currentUser.nickname): \(text)"
                 ])
             }
             textField.text = ""
