@@ -65,8 +65,8 @@ class LoginViewController: UIViewController {
                     
                     User.currentUser.id = userinfo["_id"]!
                     User.currentUser.sessionid =  userinfo["session_id"]!
-                    User.currentUser.email =  userinfo["email"]!
-                    User.currentUser.nickname =  userinfo["nickname"]!
+                    User.currentUser.email = userinfo["email"]!
+                    User.currentUser.nickname = userinfo["nickname"]!
                     
                 }
                 print("msg: \(parseJSON["msg"]) \n");

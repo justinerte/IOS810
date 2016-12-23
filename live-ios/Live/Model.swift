@@ -39,10 +39,10 @@ struct Comment {
 
 struct User {
     
-    var id = ""
-    var sessionid = ""
-    var email = ""
-    var nickname = ""
+    var id : String = ""
+    var sessionid : String = ""
+    var email : String = ""
+    var nickname: String = ""
     static var currentUser = User()
 }
 

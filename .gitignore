@@ -4,3 +4,5 @@ xcuserdata/
 *.pbxuser
 *.perspective
 *.perspectivev3
+
+node_modules
