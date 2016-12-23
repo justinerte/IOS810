@@ -27,18 +27,65 @@ class LoginViewController: UIViewController {
         
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
+
+        let myurl = URL(string: "\(Config.serverUrl)/login")
+        var request = URLRequest(url: myurl!)
+        request.httpMethod = "POST"
+        let postString = "email=\(userEmail)&password=\(userPassword)"
         
-        let userEmailStored = UserDefaults.standard.string(forKey:"userEmail");
-        let userPasswordStord = UserDefaults.standard.string(forKey:"userPassword");
+        request.httpBody = postString.data(using: String.Encoding.utf8)
         
-        if(userEmail == userEmailStored){
-            if(userPassword == userPasswordStord){
-                //login is successfull
-                UserDefaults.standard.set(true,forKey:"isUserLoggedIn");
-                UserDefaults.standard.synchronize();
-                self.dismiss(animated: true, completion: nil);
+        let task = URLSession.shared.dataTask(with: request){
+            (data, response, error) in
+            guard error == nil else {
+                print(error)
+                return
             }
+            guard let data = data else {
+                print("Data is empty")
+                return
+            }
+            
+            
+            //   print( String(data: data, encoding: String.Encoding.utf8))
+            
+            let json = try! JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions.allowFragments])
+            
+            var myjson = json as? [String: Any]
+            
+            var isUserLogined = false
+            
+            if let parseJSON = myjson {
+                var resultStatus = parseJSON["status"] as! String
+                print("resultStatus: \(resultStatus) \n")
+                if resultStatus == "succ"{
+                    isUserLogined = true
+                }
+                
+                var messageToDisplay:String =  parseJSON["msg"] as! String
+                
+                DispatchQueue.main.async {
+                    //self.displayMaAlertMessage(userMessage: messageToDisplay)
+                }
+            }
+            
+            
         }
+        task.resume()
+
+        
+        
+//        let userEmailStored = UserDefaults.standard.string(forKey:"userEmail");
+//        let userPasswordStord = UserDefaults.standard.string(forKey:"userPassword");
+//        
+//        if(userEmail == userEmailStored){
+//            if(userPassword == userPasswordStord){
+//                //login is successfull
+//                UserDefaults.standard.set(true,forKey:"isUserLoggedIn");
+//                UserDefaults.standard.synchronize();
+//                self.dismiss(animated: true, completion: nil);
+//            }
+//        }
         
     }
 
