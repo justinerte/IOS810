@@ -69,12 +69,16 @@ class LoginViewController: UIViewController {
 //                DispatchQueue.main.async {
 //                    //self.displayMaAlertMessage(userMessage: messageToDisplay)
 //                }
+                if(isUserLogined == true){
+                    self.performSegue(withIdentifier: "NavigationControllerView", sender: self);
+                }
+
             }
             
             
         }
         task.resume()
-
+        
         
         
 //        let userEmailStored = UserDefaults.standard.string(forKey:"userEmail");

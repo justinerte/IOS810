@@ -187,10 +187,19 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `LoginViewController`, and contains static references to 2 segues.
     struct loginViewController {
+      /// Segue identifier `NavigationControllerView`.
+      static let navigationControllerView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, NavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "NavigationControllerView")
       /// Segue identifier `registerView`.
       static let registerView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, RegisterPageViewController> = Rswift.StoryboardSegueIdentifier(identifier: "registerView")
+      
+      /// Optionally returns a typed version of segue `NavigationControllerView`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func navigationControllerView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, NavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.navigationControllerView, segue: segue)
+      }
       
       /// Optionally returns a typed version of segue `registerView`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
