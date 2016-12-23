@@ -234,7 +234,6 @@
                     <connections>
                         <outlet property="repeatPasswordTextField" destination="CDl-Hr-VRl" id="vTt-MB-IB7"/>
                         <outlet property="userEmailTextField" destination="19j-NI-4yd" id="2pe-aG-uvx"/>
-                        <outlet property="userNickname" destination="ggc-IO-GhP" id="LV7-XO-D1M"/>
                         <outlet property="userNicknameTextField" destination="ggc-IO-GhP" id="DPX-8X-Fb5"/>
                         <outlet property="userPasswordTextField" destination="5RB-uU-6Kc" id="4G6-zD-BDi"/>
                     </connections>

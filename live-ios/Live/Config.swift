@@ -12,6 +12,6 @@ struct Config {
     
     static var rtmpPushUrl = "rtmp://www.runxiflute.com/live/"
     static var rtmpPlayUrl = "rtmp://www.runxiflute.com/live/"
-    static var serverUrl = "https://www.runxiflute.com/:5000"
+    static var serverUrl = "http://www.runxiflute.com:3000"
     
 }

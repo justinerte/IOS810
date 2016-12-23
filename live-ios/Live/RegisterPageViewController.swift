@@ -48,20 +48,67 @@ class RegisterPageViewController: UIViewController {
             //Display an alert message
             displayMaAlertMessage(userMessage: "Passwords do not match");
         }
-        // Store data
-        UserDefaults.standard.set(userEmail,forKey:"userEmail");
+        let myurl = URL(string: "\(Config.serverUrl)/register")
+        var request = URLRequest(url: myurl!)
+        request.httpMethod = "POST"
+        let postString = "email=\(userEmail)&nickname=\(userNickname)&password=\(userPassword)"
         
-        UserDefaults.standard.set(userPassword,forKey:"userPassword");
+        request.httpBody = postString.data(using: String.Encoding.utf8)
         
-        UserDefaults.standard.set(userNickname,forKey:"userNickname");
+        let task = URLSession.shared.dataTask(with: request){
+            (data, response, error) in
+            guard error == nil else {
+                print(error)
+                return
+            }
+            guard let data = data else {
+                print("Data is empty")
+                return
+            }
+            
+            
+            //   print( String(data: data, encoding: String.Encoding.utf8))
+    
+            let json = try! JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions.allowFragments])
+            
+            var myjson = json as? [String: Any]
+            
+            var isUserRegistered = false
+            
+            if let parseJSON = myjson {
+                var resultStatus = parseJSON["status"] as! String
+                print("resultStatus: \(resultStatus) \n")
+                if resultStatus == "succ"{
+                    isUserRegistered = true
+                }
+                
+                var messageToDisplay:String =  parseJSON["msg"] as! String
+                
+                DispatchQueue.main.async {
+                     self.displayMaAlertMessage(userMessage: messageToDisplay)
+                }
+            }
         
-        UserDefaults.standard.synchronize();
+
+        }
+        task.resume()
+    
+    
         
-        
-        // Dispaly alert message with confirmation
-        displayMaAlertMessage(userMessage: "Registration is successful.Thank you!")
-        
+//        // Store data
+//        UserDefaults.standard.set(userEmail,forKey:"userEmail");
+//        
+//        UserDefaults.standard.set(userPassword,forKey:"userPassword");
+//        
+//        UserDefaults.standard.set(userNickname,forKey:"userNickname");
+//        
+//        UserDefaults.standard.synchronize();
+//        
+//        
+//        // Dispaly alert message with confirmation
+//        displayMaAlertMessage(userMessage: "Registration is successful.Thank you!")
     }
+    
     func displayMaAlertMessage(userMessage:String){
         let myAlert = UIAlertController(title:"Alert",message:userMessage,preferredStyle:UIAlertControllerStyle.alert);
         
