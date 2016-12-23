@@ -39,7 +39,8 @@ class HomeViewController: UIViewController {
     func refresh() {
         SVProgressHUD.show()
         let request = URLRequest(url: URL(string: "\(Config.serverUrl)/rooms")!)
-        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main, completionHandler: { resp, data, err in
+        print("\(Config.serverUrl)/rooms")
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main, completionHandler: { resp, data, err in 
             guard err == nil else {
                 SVProgressHUD.showError(withStatus: "Error")
                 return

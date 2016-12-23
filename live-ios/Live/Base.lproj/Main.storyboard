@@ -120,6 +120,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="a5W-Zp-67k" eventType="touchUpInside" id="Ma0-em-pSV"/>
+                                    <segue destination="fEL-Zt-6G9" kind="modal" identifier="loginsuccess" id="gTQ-py-KrF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -802,7 +803,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kPp-GM-YLq" customClass="NavigationController" customModule="Live" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uqv-yX-KK5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uqv-yX-KK5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -830,7 +831,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="o4T-Ro-y1t"/>
+        <segue reference="xZl-29-pOA"/>
         <segue reference="93g-pg-D1Y"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -44,6 +44,7 @@ class AudienceViewController: UIViewController {
     
     func joinRoom() {
         socket.emit("join_room", room.key)
+        socket.emit("my_join_room", ["roomKey": room.key, "email": User.currentUser.email])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,6 +88,7 @@ class AudienceViewController: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: AnyObject) {
+        socket.emit("my_leave_room", ["roomKey": room.key, "email": User.currentUser.email])
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     

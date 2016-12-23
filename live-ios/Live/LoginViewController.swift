@@ -60,13 +60,15 @@ class LoginViewController: UIViewController {
                 print("resultStatus: \(resultStatus) \n")
                 if resultStatus == "succ"{
                     isUserLogined = true
+                    User.currentUser.email = userEmail!;
+                    //self.dismiss(animated: true, completion: nil);
                 }
                 
                 var messageToDisplay:String =  parseJSON["msg"] as! String
                 
-                DispatchQueue.main.async {
-                    //self.displayMaAlertMessage(userMessage: messageToDisplay)
-                }
+//                DispatchQueue.main.async {
+//                    //self.displayMaAlertMessage(userMessage: messageToDisplay)
+//                }
             }
             
             

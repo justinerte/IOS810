@@ -40,8 +40,8 @@ struct Comment {
 struct User {
     
     var id = Int(arc4random())
-    
-    static let currentUser = User()
+    var email = ""
+    static var currentUser = User()
 }
 
 
