@@ -11,6 +11,7 @@ app.post('/login', function(req,res){
   let email = req.body.email;
   let password = req.body.password;
   userData.login(email, password).then((user)=>{
+      delete user['_id'];
     res.json({status: 'succ', data: user, msg: 'succ'});
   }).catch((err)=> {
     res.json({status: 'err', msg: err});
@@ -34,15 +35,42 @@ app.get('/logout', function(req,res){
 });
 
 app.get('/rooms', function(req, res) {
+
   var roomList = Object.keys(rooms).map(function(key) {
     return rooms[key]
   })
   res.send(roomList)
 })
 
-var rooms = {}
+  app.get('/allusers', function(req, res) {
+      res.json(myrooms);
+  })
 
-io.on('connection', function(socket) {
+
+  app.get('/rooms/:key', function(req, res) {
+      res.json(myrooms[req.params.key]);
+  })
+
+  var rooms = {}
+  var myrooms = {}
+
+  io.on('connection', function(socket) {
+      //my staff
+      socket.on('my_join_room', function(data) {
+          console.log('my join room:', data.roomKey);
+          if(!myrooms[data.roomKey]){
+              myrooms[data.roomKey] = [];
+          }
+          myrooms[data.roomKey].push(data.email);
+      })
+
+      socket.on('my_leave_room', function(data) {
+          console.log('my leave room:', data.roomKey);
+          if(myrooms[data.roomKey]){
+              myrooms[data.roomKey].filter( (email)=>{ return email !=data.email;});
+          }
+      })
+      //end my staff
 
   socket.on('create_room', function(room) {
     if (!room.key) {

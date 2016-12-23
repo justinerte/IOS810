@@ -39,7 +39,7 @@ struct Comment {
 
 struct User {
     
-    var id : String = ""
+    var id =  Int(arc4random())
     var sessionid : String = ""
     var email : String = ""
     var nickname: String = ""

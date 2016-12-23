@@ -56,8 +56,7 @@ let exportedMethods = {
                 return Promise.reject ("wrong password");
             }
         }).then((user)=> {
-
-            return this.updateSessionId(user._id);
+            return  this.updateSessionId(user._id);
         }).catch((err)=> {
 
             return Promise.reject(err);

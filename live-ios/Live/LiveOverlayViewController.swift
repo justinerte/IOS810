@@ -104,9 +104,15 @@ extension LiveOverlayViewController: UITextFieldDelegate {
         if string == "\n" {
             textField.resignFirstResponder()
             if let text = textField.text , text != "" {
+                var nickname = User.currentUser.nickname
+                let indexStartOfText = nickname.index(nickname.startIndex, offsetBy: 10) // 3
+                
+                nickname = nickname.substring(from: indexStartOfText)
+                let indexEndOfText = nickname.index(nickname.endIndex, offsetBy: -2)
+                nickname = nickname.substring(to: indexEndOfText)
                 socket.emit("comment", [
                     "roomKey": room.key,
-                    "text": "\(User.currentUser.nickname): \(text)"
+                    "text":"\(nickname): \(text)"
                 ])
             }
             textField.text = ""

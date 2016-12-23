@@ -12,6 +12,7 @@
 		0924B98D1E0AC3A300A21C6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */; };
 		093A98A81E0C20770006A4E1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A98A71E0C20770006A4E1 /* icon.png */; };
 		093A98AA1E0C227B0006A4E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093A98A91E0C227B0006A4E1 /* Images.xcassets */; };
+		A34549AE1E0DE17100C05A6B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34549AD1E0DE17100C05A6B /* SwiftyJSON.swift */; };
 		B32E392C1D336A5500FA87AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E392B1D336A5500FA87AB /* AppDelegate.swift */; };
 		B32E39311D336A5500FA87AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E392F1D336A5500FA87AB /* Main.storyboard */; };
 		B32E39361D336A5500FA87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E39341D336A5500FA87AB /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		4FD07D4932212F687E5F1B5C /* Pods-Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.debug.xcconfig"; sourceTree = "<group>"; };
 		8FEF6E319D18D0F7F9E49151 /* Pods-Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live.release.xcconfig"; path = "Pods/Target Support Files/Pods-Live/Pods-Live.release.xcconfig"; sourceTree = "<group>"; };
 		9AB8022663522F75E00F7B60 /* Pods_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34549AD1E0DE17100C05A6B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B32E39281D336A5500FA87AB /* Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32E392B1D336A5500FA87AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32E39301D336A5500FA87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				0924B9881E09EA7B00A21C6E /* ViewController.swift */,
 				0924B98A1E09EC4D00A21C6E /* RegisterPageViewController.swift */,
 				0924B98C1E0AC3A300A21C6E /* LoginViewController.swift */,
+				A34549AD1E0DE17100C05A6B /* SwiftyJSON.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				B32E392C1D336A5500FA87AB /* AppDelegate.swift in Sources */,
 				B3401F6A1D35DCA400ECF1CC /* String.swift in Sources */,
 				B3401F8A1D38AA6E00ECF1CC /* GiftChooserViewController.swift in Sources */,
+				A34549AE1E0DE17100C05A6B /* SwiftyJSON.swift in Sources */,
 				0924B98D1E0AC3A300A21C6E /* LoginViewController.swift in Sources */,
 				B3401F6E1D35E22800ECF1CC /* R.generated.swift in Sources */,
 				B3401F331D33903100ECF1CC /* AudienceViewController.swift in Sources */,

@@ -35,56 +35,37 @@ class LoginViewController: UIViewController {
         
         request.httpBody = postString.data(using: String.Encoding.utf8)
         
-        let task = URLSession.shared.dataTask(with: request){
-            (data, response, error) in
-            guard error == nil else {
-                print(error)
-                return
-            }
-            guard let data = data else {
-                print("Data is empty")
-                return
-            }
-            
-            
-            //   print( String(data: data, encoding: String.Encoding.utf8))
-            
-            let json = try! JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions.allowFragments])
-            
-            var myjson = json as? [String: Any]
-            
-            var isUserLogined = false
-            
-            if let parseJSON = myjson {
-                var resultStatus = parseJSON["status"] as! String
-                print("resultStatus: \(resultStatus) \n")
-                if resultStatus == "succ"{
-                    isUserLogined = true
-                    
-                    var userinfo = parseJSON["data"] as! [String: String]
-                    
-                    User.currentUser.id = userinfo["_id"]!
-                    User.currentUser.sessionid =  userinfo["session_id"]!
-                    User.currentUser.email = userinfo["email"]!
-                    User.currentUser.nickname = userinfo["nickname"]!
-                    
-                }
-                print("msg: \(parseJSON["msg"]) \n");
-
-                if(isUserLogined == true){
-                    
-                    DispatchQueue.main.async {
-                        //self.displayMaAlertMessage(userMessage: messageToDisplay)
-                        self.performSegue(withIdentifier: "NavigationControllerView", sender: self)
-                    }
-                 
-                }
-
-            }
-            
+        
+       NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main, completionHandler: { response, data, error in
+        guard error == nil else {
+            print(error)
+            return
+        }
+        
+        
+        let json = JSON(data: data!)
+        
+        var isUserLogined = false
+        
+        if json["status"].stringValue == "succ"{
+            isUserLogined = true
+            User.currentUser.sessionid =  json["data"]["_id"].stringValue
+            User.currentUser.email = json["data"]["email"].stringValue
+            User.currentUser.nickname = json["data"]["nickname"].stringValue
             
         }
-        task.resume()
+        
+        if(isUserLogined == true){
+            
+            DispatchQueue.main.async {
+                //self.displayMaAlertMessage(userMessage: messageToDisplay)
+                self.performSegue(withIdentifier: "NavigationControllerView", sender: self)
+            }
+            
+        }
+
+        
+        })
         
         
         
