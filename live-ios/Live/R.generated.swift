@@ -300,7 +300,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = NavigationController
+      typealias InitialController = ViewController
       
       let audience = StoryboardViewControllerResource<AudienceViewController>(identifier: "audience")
       let broadcast = StoryboardViewControllerResource<BroadcasterViewController>(identifier: "broadcast")
