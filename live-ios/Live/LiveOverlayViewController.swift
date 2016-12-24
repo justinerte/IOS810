@@ -105,7 +105,7 @@ extension LiveOverlayViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             if let text = textField.text , text != "" {
                 var nickname = User.currentUser.nickname
-                let indexStartOfText = nickname.index(nickname.startIndex, offsetBy: 10) // 3
+                let indexStartOfText = nickname.index(nickname.startIndex, offsetBy: 10)
                 
                 nickname = nickname.substring(from: indexStartOfText)
                 let indexEndOfText = nickname.index(nickname.endIndex, offsetBy: -2)
