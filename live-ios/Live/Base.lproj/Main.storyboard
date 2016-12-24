@@ -237,6 +237,7 @@
                         <outlet property="userEmailTextField" destination="19j-NI-4yd" id="2pe-aG-uvx"/>
                         <outlet property="userNicknameTextField" destination="ggc-IO-GhP" id="DPX-8X-Fb5"/>
                         <outlet property="userPasswordTextField" destination="5RB-uU-6Kc" id="4G6-zD-BDi"/>
+                        <segue destination="a5W-Zp-67k" kind="modal" identifier="registerView" id="pvx-Wo-f2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAG-i2-xVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -770,11 +771,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lq4-21-BK3" id="wVV-lU-d0M">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8z-72-FJp">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="59"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -834,7 +835,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pvx-Wo-f2A"/>
         <segue reference="93g-pg-D1Y"/>
-        <segue reference="xZl-29-pOA"/>
     </inferredMetricsTieBreakers>
 </document>

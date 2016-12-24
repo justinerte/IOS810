@@ -84,11 +84,21 @@ class RegisterPageViewController: UIViewController {
                 
                 var messageToDisplay:String =  parseJSON["msg"] as! String
                 
-                DispatchQueue.main.async {
-                     self.displayMaAlertMessage(userMessage: messageToDisplay)
-                }
+//                DispatchQueue.main.async {
+//                     self.displayMaAlertMessage(userMessage: messageToDisplay)
+//                }
             }
         
+            if(isUserRegistered == true){
+                
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "registerView", sender: self)
+
+//                    self.displayMaAlertMessage(userMessage: messageToDisplay)
+                }
+//                    self.performSegue(withIdentifier: "registerView", sender: self)
+                
+            }
 
         }
         task.resume()
