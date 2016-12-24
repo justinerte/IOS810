@@ -26,7 +26,17 @@ let exportedMethods = {
         let hash = bcrypt.hashSync(password, salt);
         let id = uuid.v4();
         
+            
         return userCollection().then((users) => {
+
+            return users.findOne({email:email}).then(user=>{
+
+                if(user) return Promise.reject("email has already been registed");
+
+                return users;
+            });
+
+        }).then(users=>{
             return users.insertOne({_id: id, session_id: "", email: email, nickname: nickname, password: hash});         
         }).then((user) => {
             return this.getUser(user.insertedId);
