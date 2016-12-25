@@ -12,6 +12,10 @@
 	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>use ur mic for recording</string>
+	<key>NSCameraUsageDescription</key>
+	<string>use ur mic for live streaming</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
