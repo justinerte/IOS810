@@ -118,6 +118,11 @@ class RegisterPageViewController: UIViewController {
 //        // Dispaly alert message with confirmation
 //        displayMaAlertMessage(userMessage: "Registration is successful.Thank you!")
     }
+  
+    @IBAction func TEST(_ sender: Any) {
+        self.view.endEditing(true);
+    }
+   
     
     func displayMaAlertMessage(userMessage:String){
         let myAlert = UIAlertController(title:"Alert",message:userMessage,preferredStyle:UIAlertControllerStyle.alert);

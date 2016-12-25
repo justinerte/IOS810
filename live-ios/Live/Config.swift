@@ -10,8 +10,8 @@ import Foundation
 
 struct Config {
     
-    static var rtmpPushUrl = "rtmp://www.runxiflute.com/live/"
-    static var rtmpPlayUrl = "rtmp://www.runxiflute.com/live/"
-    static var serverUrl = "http://www.runxiflute.com:3000"
+    static var rtmpPushUrl = "rtmp://83.212.99.65/live/"
+    static var rtmpPlayUrl = "rtmp://83.212.99.65/live/"
+    static var serverUrl = "http://83.212.99.65:5000"
     
 }
